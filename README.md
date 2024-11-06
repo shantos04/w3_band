@@ -18,3 +18,6 @@ This project was created to help me practice and reinforce my knowledge of HTML 
 ## Technologies Used
 - **HTML**: To build the structure and content of the website.
 - **CSS**: To design the interface and layout of the website.
+
+## Link
+- [w3_band website](https://www.w3schools.com/w3css/tryw3css_templates_band.htm#band)
