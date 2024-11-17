@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The band</title>
     <link rel="icon"
         href="https://img.freepik.com/premium-vector/live-band-icon-vector-image-can-be-used-artist-studio_120816-93155.jpg">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/fonts/themify-icons/themify-icons.css">
 </head>
 
@@ -21,7 +22,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
@@ -37,6 +38,10 @@
             <!-- Begin: Search button-->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
             </div>
             <!-- End: Search button-->
         </div>
@@ -216,6 +221,32 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight
+
+        // Open/Close mobile menu
+        mobileMenu.onclick = function () {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // Auto closed menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function () {
+                header.style.height = null
+            }
+        }
+    </script>
 
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
