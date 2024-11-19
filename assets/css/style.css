@@ -261,7 +261,7 @@ html {
 }
 
 #content .member-list {
-    margin-top: 47px;
+    margin-top: 32px;
 }
 
 #content .member-name {
@@ -313,7 +313,7 @@ html {
 
 /* Places */
 .places-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-img {
