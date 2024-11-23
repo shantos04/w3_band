@@ -50,6 +50,7 @@ html {
     cursor: pointer;
     border: none;
     text-align: center;
+    appearance: none;
 }
 
 .btn:hover {
